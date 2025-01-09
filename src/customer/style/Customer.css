@@ -1,0 +1,95 @@
+.navbar {
+    background-color: rgb(180, 177, 177);
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.container2 a button {
+    position: absolute;
+    top: 15%;
+    right: 20px;
+    border-radius: 15px;
+    height: 50px;
+    width: 120px;
+    background-size: cover;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(67, 153, 250);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.container2 a button:hover {
+    background-color: rgb(50, 120, 200);
+}
+
+.container3 {
+    padding: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    background-color: #f5f5f5;
+    justify-content: center;
+    align-items: center;
+}
+
+.container3 div {
+    background-color: pink;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.container3 div:hover {
+    transform: translateY(-5px);
+}
+
+.container3 div img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+}
+
+.container3 div button {
+    background-color: rgb(67, 153, 250);
+    color: #fff;
+    border-radius: 15px;
+    padding: 10px 20px;
+    width: auto;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.container3 div button:hover {
+    background-color: rgb(50, 120, 200);
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container3 {
+        padding: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .container2 a button {
+        margin-left: 0;
+        width: 100%;
+    }
+}
