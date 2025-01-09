@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "../style/style.css"; 
+import { API_DUMMY } from "../utils/Baseurl";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +26,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:2026/api/user/register", {
+      await axios.post(`${API_DUMMY}/api/user/register`, {
         email: email,
         password: password,
         name: name,

@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import "../style/style.css"; 
+import { API_DUMMY } from "../utils/Baseurl";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -28,7 +29,7 @@ const Login = () => {
 
     try {
       // eslint-disable-next-line no-unused-vars
-      const response = await axios.post("http://localhost:2026/api/user/login", {
+      const response = await axios.post(`${API_DUMMY}/api/user/login`, {
         email: email,
         password: password,
       });
